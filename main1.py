@@ -99,8 +99,8 @@ async def predict_disease_from_symptom(symptom_list: List[str]):
         response = { "resultat": result}
         return response
 
-
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8005)
+"""
+#if __name__ == "__main__":
+    #import uvicorn
+    #uvicorn.run(app, host="127.0.0.1", port=8005)
+""""
