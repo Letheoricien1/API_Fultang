@@ -28,7 +28,7 @@ async def root():
 
 
 # Function to make Inference
-@app.post("/diseases/prediction")
+@app.get("/diseases/prediction")
 async def predict_disease_from_symptom(symptom_list: List[str]):
         symptoms = {'itching': 0, 'skin_rash': 0, 'nodal_skin_eruptions': 0, 'continuous_sneezing': 0,
                     'shivering': 0, 'chills': 0, 'joint_pain': 0, 'stomach_pain': 0, 'acidity': 0, 'ulcers_on_tongue': 0,
