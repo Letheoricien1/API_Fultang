@@ -28,7 +28,7 @@ async def root():
 
 
 # Function to make Inference
-@app.get("/diseases/prediction")
+@app.post("/diseases/prediction")
 async def predict_disease_from_symptom(symptom_list1: dict):
         print("hello")
         symptom_list=symptom_list1["symptoms"]
