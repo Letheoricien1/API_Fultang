@@ -29,7 +29,9 @@ async def root():
 
 # Function to make Inference
 @app.get("/diseases/prediction")
-async def predict_disease_from_symptom(symptom_list: List[str]):
+async def predict_disease_from_symptom(symptom_list1: dict):
+        print("hello")
+        symptom_list=symptom_list1["symptoms"]
         symptoms = {'itching': 0, 'skin_rash': 0, 'nodal_skin_eruptions': 0, 'continuous_sneezing': 0,
                     'shivering': 0, 'chills': 0, 'joint_pain': 0, 'stomach_pain': 0, 'acidity': 0, 'ulcers_on_tongue': 0,
                     'muscle_wasting': 0, 'vomiting': 0, 'burning_micturition': 0, 'spotting_ urination': 0, 'fatigue': 0,
