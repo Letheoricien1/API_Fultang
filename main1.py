@@ -7,6 +7,8 @@ import pandas as pd
 import numpy as np
 #
 from joblib import load
+with open('1Fultang.pkl', 'rb') as file:
+    loaded_model1 = pickle.load(file)
 # Spécifiez le chemin vers votre fichier texte
 chemin_fichier = 'disease.txt'
 
@@ -84,7 +86,8 @@ async def predict_disease_from_symptom(symptom_list1: dict):
         df_test.loc[0] = np.array(list(symptoms.values()))
 
         # Load pre-trained model
-        clf = load(str("Fultang.joblib"))
+        #clf = load(str("Fultang.joblib"))
+        clf=loaded_model1
         # result = clf.predict(df_test)
         probabilities = clf.predict_proba(df_test)
 
