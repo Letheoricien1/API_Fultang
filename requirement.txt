@@ -1,5 +1,4 @@
 fastapi
-pickle
 scikit-learn == 1.0.2
 uvicorn
 gunicorn
